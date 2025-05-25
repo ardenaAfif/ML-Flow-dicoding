@@ -1,0 +1,10 @@
+name: ML-Flow-dicoding
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      data_path: { type: string, default: "train_pca.csv" }
+      test_data_path: { type: string, default: "train_pca_testing.csv" }
+    command: "python modelling.py {data_path} {test_data_path}"
